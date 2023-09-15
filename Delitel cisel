@@ -1,0 +1,84 @@
+#include "stdio.h"
+
+int main() {
+    int number;
+    int j = 0;
+    int d = 0;
+    int t = 0;
+    int c = 0;
+    int p = 0;
+    int s = 0;
+    int se = 0;
+    int o = 0;
+    int de = 0;
+    int des = 0;
+
+    do {
+        printf("Enter a whole number: ");
+        scanf("%d", &number);
+        if (number == 0) {
+           printf("The number is zero\n");
+        } if (number % 1 == 0) {
+            j = 1;
+        }if (number % 2 == 0) {
+            d = 2;
+        } if (number % 3 == 0) {
+            t = 3;
+        } if (number % 4 == 0) {
+            c = 4;
+        } if (number % 5 == 0) {
+            p = 5;
+        } if (number % 6 == 0) {
+            s = 6;
+        } if (number % 7 == 0) {
+            se = 7;
+        } if (number % 8 == 0) {
+            o = 8;
+        } if (number % 9 == 0) {
+            de = 9;
+        } if (number % 10 == 0) {
+            des = 10;
+        }
+
+        printf("Number can be devided by:");
+        if (j != 0) {
+            printf("%d, ", j);
+        }
+        if (d != 0) {
+            printf("%d, ", d);
+        }
+        if (t != 0) {
+            printf("%d, ", t);
+        }
+        if (c != 0) {
+            printf("%d, ", c);
+        }
+        if (p != 0) {
+            printf("%d, ", p);
+        }
+        if (s != 0) {
+            printf("%d, ", s);
+        }
+        if (se != 0) {
+            printf("%d, ", se);
+        }
+        if (o != 0) {
+            printf("%d, ", o);
+        }
+        if (de != 0) {
+            printf("%d, ", de);
+        }
+        if (des != 0) {
+            printf("%d, ", des);
+        }
+        if (number != 0) {
+            printf("\nType another number or write 0 to end\n");
+        }
+
+
+
+
+
+    }while(number != 0);
+    return 0;
+}
