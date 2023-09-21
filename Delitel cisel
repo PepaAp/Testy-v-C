@@ -1,7 +1,9 @@
 #include "stdio.h"
 
 int main() {
+    int returnvalue;
     int number;
+    int countchar;
     int j = 0;
     int d = 0;
     int t = 0;
@@ -15,12 +17,19 @@ int main() {
 
     do {
         printf("Enter a whole number: ");
-        scanf("%d", &number);
+        returnvalue = scanf("%d", &number);
+        countchar = 0;
+        while (getchar() != '\n') {
+            countchar++;
+        }
+        if (countchar != 0) {
+            printf("You have entered a wrong thing BITCH. Try again.\n");
+        }
         if (number == 0) {
            printf("The number is zero\n");
         } if (number % 1 == 0) {
             j = 1;
-        }if (number % 2 == 0) {
+        } if (number % 2 == 0) {
             d = 2;
         } if (number % 3 == 0) {
             t = 3;
@@ -39,46 +48,49 @@ int main() {
         } if (number % 10 == 0) {
             des = 10;
         }
-
-        printf("Number can be devided by:");
-        if (j != 0) {
-            printf("%d, ", j);
-        }
-        if (d != 0) {
-            printf("%d, ", d);
-        }
-        if (t != 0) {
-            printf("%d, ", t);
-        }
-        if (c != 0) {
-            printf("%d, ", c);
-        }
-        if (p != 0) {
-            printf("%d, ", p);
-        }
-        if (s != 0) {
-            printf("%d, ", s);
-        }
-        if (se != 0) {
-            printf("%d, ", se);
-        }
-        if (o != 0) {
-            printf("%d, ", o);
-        }
-        if (de != 0) {
-            printf("%d, ", de);
-        }
-        if (des != 0) {
-            printf("%d, ", des);
-        }
-        if (number != 0) {
-            printf("\nType another number or write 0 to end\n");
+        if (number == 0) {
+            return 0;
         }
 
+        if (countchar == 0) {
+            printf("Number can be devided by:");
+            if (j != 0) {
+                printf("%d, ", j);
+            }
+            if (d != 0) {
+                printf("%d, ", d);
+            }
+            if (t != 0) {
+                printf("%d, ", t);
+            }
+            if (c != 0) {
+                printf("%d, ", c);
+            }
+            if (p != 0) {
+                printf("%d, ", p);
+            }
+            if (s != 0) {
+                printf("%d, ", s);
+            }
+            if (se != 0) {
+                printf("%d, ", se);
+            }
+            if (o != 0) {
+                printf("%d, ", o);
+            }
+            if (de != 0) {
+                printf("%d, ", de);
+            }
+            if (des != 0) {
+                printf("%d, ", des);
+            }
+            if (number != 0) {
+                printf("\nType another number or write 0 to end\n");
+        }
+
+        }
 
 
-
-
-    }while(number != 0);
+    }while(countchar != 0);
     return 0;
 }
